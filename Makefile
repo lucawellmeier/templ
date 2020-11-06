@@ -1,6 +1,11 @@
 INSTALL_PATH=${HOME}/.local/bin
+EXECUTABLE=templ
+EXECUTABLE_PATH=${INSTALL_PATH}/${EXECUTABLE}
 
 install:
-	chmod +x templ.py
-	ln -sf templ.py ${INSTALL_PATH}/templ
+	cp templ.py ${EXECUTABLE_PATH}
+	chmod +x ${EXECUTABLE_PATH}
+
+uninstall:
+	rm ${EXECUTABLE_PATH}
 
